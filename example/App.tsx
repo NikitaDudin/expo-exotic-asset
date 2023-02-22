@@ -76,7 +76,7 @@ const withAssets = async (gl: ExpoWebGLRenderingContext) => {
 
 const withExoticAssets = async (gl: ExpoWebGLRenderingContext) => {
   // Fine works in Android release build
-  const asset = await resolveExoticAsync(require('./assets/wall.jpeg'));
+  const asset = await resolveExoticAsync(require('./assets/wall.jpeg.extc'));
   render(gl, asset!);
 };
 
