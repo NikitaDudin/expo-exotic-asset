@@ -1,6 +1,6 @@
 {
   "name": "expo-exotic-asset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities for converting files into Expo Assets",
   "author": "NikitaDudin <nikita.dudin@gmail.com>",
   "main": "build/index.js",
