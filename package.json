@@ -1,0 +1,60 @@
+{
+  "name": "expo-exotic-asset",
+  "version": "1.0.3",
+  "description": "Utilities for converting static local files into Expo Assets",
+  "author": "NikitaDudin <nikita.dudin@gmail.com>",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "homepage": "https://github.com/NikitaDudin/expo-exotic-asset#readme",
+  "readmeFilename": "README.md",
+  "license": "ISC",
+  "keywords": [
+    "expo",
+    "asset",
+    "exotic-asset",
+    "react-native",
+    "react"
+  ],
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "test": "expo-module test",
+    "lint": "expo-module lint",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaDudin/expo-exotic-asset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NikitaDudin/expo-exotic-asset/issues"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "src"
+  },
+  "peerDependencies": {
+    "expo-asset": "*",
+    "expo-asset-utils": "*",
+    "expo-file-system": "*",
+    "expo-modules-core": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "expo": "^45.0.0",
+    "expo-asset": "^8.5.0",
+    "expo-asset-utils": "^3.0.0",
+    "expo-file-system": "^14.0.0",
+    "expo-module-scripts": "^3.0.0",
+    "expo-modules-core": "1.1.1",
+    "jest": "^26.6.3",
+    "jest-expo": "^45.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-native": "~0.68.2",
+    "typescript": "^4.6.3"
+  }
+}
