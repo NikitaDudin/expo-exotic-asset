@@ -15,12 +15,7 @@ import {
  */
 async function resolveExoticAsync(uri: number | string): Promise<Asset | null> {
   try {
-    const asset = Asset.fromModule(uri);
-
-    if (!asset.downloaded) {
-      await asset.downloadAsync();
-    }
-
+    const [asset] = await Asset.loadAsync(uri);
     const { hash, type, name } = asset;
     const fileName = ['ExoticAssetFile', name, hash].join('-');
     const path = `${cacheDirectory}${[fileName, type].filter(Boolean).join('.')}`;
@@ -31,7 +26,11 @@ async function resolveExoticAsync(uri: number | string): Promise<Asset | null> {
       await copyAsync({ from: asset.localUri || asset.uri, to: path });
     }
 
-    return Asset.fromURI(path);
+    const fileReference = Asset.fromURI(path);
+    // https://github.com/expo/expo-asset-utils/blob/master/src/resolveAsync.ts#L30
+    fileReference.localUri = path;
+
+    return fileReference;
   } catch (e) {
     return null;
   }
