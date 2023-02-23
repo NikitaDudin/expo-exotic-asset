@@ -13,7 +13,7 @@ A texture from a static asset file works fine in debug mode. But doesn't work in
 
 |Android debug | Android release |
 | ------ | ------ |
-| <img src="https://raw.githubusercontent.com/NikitaDudin/expo-exotic-asset/main/example/asset/debug.jpg" width='200'> |  <img src="https://raw.githubusercontent.com/NikitaDudin/expo-exotic-asset/main/example/asset/release.jpg" width='200'> |
+| <img src="https://raw.githubusercontent.com/NikitaDudin/expo-exotic-asset/main/example/assets/debug.jpg" width='200'> |  <img src="https://raw.githubusercontent.com/NikitaDudin/expo-exotic-asset/main/example/assets/release.jpg" width='200'> |
 
 # Linked issues
 
