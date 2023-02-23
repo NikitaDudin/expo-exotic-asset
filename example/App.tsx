@@ -1,5 +1,5 @@
 import { Asset } from "expo-asset";
-import { resolveExoticAsync } from "../src";
+import { resolveExoticAsync } from "expo-exotic-asset";
 import { ExpoWebGLRenderingContext, GLView } from "expo-gl";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 
