@@ -1,6 +1,6 @@
 {
   "name": "expo-exotic-asset",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utilities for converting static local files into Expo Assets",
   "author": "NikitaDudin <nikita.dudin@gmail.com>",
   "main": "build/index.js",
@@ -37,7 +37,6 @@
   },
   "peerDependencies": {
     "expo-asset": "*",
-    "expo-asset-utils": "*",
     "expo-file-system": "*",
     "expo-modules-core": "*",
     "react-native": "*"
@@ -46,7 +45,6 @@
     "eslint": "^8.34.0",
     "expo": "^45.0.0",
     "expo-asset": "^8.5.0",
-    "expo-asset-utils": "^3.0.0",
     "expo-file-system": "^14.0.0",
     "expo-module-scripts": "^3.0.0",
     "expo-modules-core": "1.1.1",

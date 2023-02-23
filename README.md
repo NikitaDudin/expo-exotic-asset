@@ -33,44 +33,18 @@ npm install expo-exotic-asset
 yarn add expo-exotic-asset
 ```
 
-# Configure
-
-Add the `extc` extension for all problems static asset files.
-
-```
-asset/img.png.extc
-asset/img.jpg.extc
-...etc.
-```
-
-Add the following code to metro.config.js
-
-```js
-const { getDefaultConfig } = require('expo/metro-config');
-
-const config = getDefaultConfig(__dirname);
-
-const ASSETS_EXTS = ['extc']; // <- this
-
-config.resolver.assetExts.push(...ASSETS_EXTS); // <- this
-
-module.exports = config;
-```
-
-See example.
-
 # Usage
 
 * `resolveExoticAsync` returns a promise that resolves a expo Asset or null
 
 ```ts
-const asset = await resolveExoticAsync(require('asset/img.png.extc)); // Asset or null
+const asset = await resolveExoticAsync(require('asset/img.png)); // Asset or null
 ```
 
 * `resolveExoticPathAsync` same as resolveExoticAsync but returns a promise that resolves file uri string or null
 
 ```ts
-const uri = await resolveExoticPathAsync(require('asset/img.png.extc)); // string or null
+const uri = await resolveExoticPathAsync(require('asset/img.png)); // string or null
 ```
 
 # Contributing
