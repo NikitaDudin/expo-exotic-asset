@@ -2,7 +2,7 @@
 
 Utilities for converting static local files into Expo Assets
 
-[![npm version](https://img.shields.io/npm/v/expo-exotic-asset.svg?style=flat)](https://www.npmjs.com/package/nikitadudin/expo-exotic-asset)
+[![npm version](https://img.shields.io/npm/v/expo-exotic-asset.svg?style=flat)](https://www.npmjs.com/package/expo-exotic-asset)
 [![issues](https://img.shields.io/github/issues/nikitadudin/expo-exotic-asset.svg?style=flat)](https://github.com/nikitadudin/expo-exotic-asset/issues)
 
 # Why
