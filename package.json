@@ -1,6 +1,6 @@
 {
   "name": "expo-exotic-asset",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Utilities for converting static local files into Expo Assets",
   "author": "NikitaDudin <nikita.dudin@gmail.com>",
   "main": "build/index.js",

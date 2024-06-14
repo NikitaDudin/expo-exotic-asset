@@ -1,5 +1,5 @@
 import { Asset } from 'expo-asset';
-import { cacheDirectory, getInfoAsync } from 'expo-file-system';
+import { cacheDirectory, copyAsync, getInfoAsync } from 'expo-file-system';
 
 /**
  * Helping function for loading files from "assets" folder.
@@ -12,20 +12,22 @@ import { cacheDirectory, getInfoAsync } from 'expo-file-system';
 async function resolveExoticAsync(uri: number | string): Promise<Asset | null> {
   try {
     const [asset] = await Asset.loadAsync(uri);
-    const { hash, type } = asset;
+    const { hash, type, name } = asset;
+    const fileName = ['ExoticAssetFile', name, hash].join('-');
+    const path = `${cacheDirectory}${[fileName, type].filter(Boolean).join('.')}`;
 
-    // Expo SDK 51: fix ios "asset is not readable". https://github.com/expo/expo/issues/29759
-    if (asset.localUri?.includes('.expo-internal')) {
-      const expfile = `${cacheDirectory}ExponentAsset-${hash}.${type}`;
-      const info = await getInfoAsync(expfile);
+    const info = await getInfoAsync(path);
 
-      if (info.exists) {
-        return Asset.fromURI(expfile);
-      }
+    if (!info.exists) {
+      await copyAsync({ from: asset.localUri || asset.uri, to: path });
     }
 
-    return asset;
-  } catch (e) {
+    const fileReference = Asset.fromURI(path);
+    // https://github.com/expo/expo-asset-utils/blob/master/src/resolveAsync.ts#L30
+    fileReference.localUri = path;
+
+    return fileReference;
+  } catch (_) {
     return null;
   }
 }
